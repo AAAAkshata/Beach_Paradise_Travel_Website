@@ -4,13 +4,13 @@ A beach-themed travel website designed to explore destinations and travel packag
 
 ## Technologies Used
 
-HTML
-CSS
+- HTML
+- CSS
 
 ## Features
 
-Travel destinations
-Attractive and interactive UI
-Travel packages
-Images and videos
-Navigation between pages
+- Travel destinations
+- Attractive and interactive UI
+- Travel packages
+- Images and videos
+- Navigation between pages
