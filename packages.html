@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Travel Card Layout</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .travel-card {
+        min-height: calc(100vh - 65px);
+        width: 100vw;
+        /*border: 1px solid;*/
+        display: flex; /* puts children side-by-side */
+        align-items: flex-start;
+        margin-top: 65px;
+        background-image: url("./Images_2/goa-destination.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .featured-destination {
+        /* height: 200px;*/
+
+        width: 250px;
+        /*border: 1px solid;*/
+        margin-left: 150px;
+        margin-top: 20px;
+        position: sticky;
+        top: 20px;
+        top: 85px; /* navbar height + small gap */
+        z-index: 5;
+      }
+      .destination-list {
+        height: 100%;
+        width: 800px;
+        /*border: 1px solid;*/
+        margin-left: 190px;
+        margin-bottom: 50px;
+        margin-top: 20px;
+        display: flex;
+        align-items: flex-start;
+        border-radius: 20px;
+        backdrop-filter: blur(2px);
+        background-color: rgba(183, 181, 181, 0.8);
+
+        overflow-y: auto;
+      }
+      /*hide scroll line*/
+      .destination-list::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+      .destination-card-image {
+        width: 300px;
+        /*border: 1px solid;*/
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px;
+      }
+      .card-image {
+        height: 300px;
+        width: 100%;
+        border: 2px solid white;
+      }
+
+      .card-content {
+        height: 100%;
+        width: 500px;
+        /*border: 1px solid;*/
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        margin-top: 30px;
+      }
+      .card-content-list {
+        height: 242px;
+        width: 100%;
+        /*border: 1px solid;*/
+        padding-left: 10px;
+        padding-top: 20px;
+      }
+      .card-content-list h3 {
+        font-size: 25px;
+      }
+      .card-content-list p {
+        padding-right: 25px;
+      }
+      .card-content-list button {
+        height: 45px;
+        width: 150px;
+        background-color: #5f9cff;
+        border-radius: 10px;
+        border: none;
+      }
+      .card-content-list button:hover {
+        cursor: pointer;
+        background-color: #38898d;
+      }
+      .card-image img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+      }
+      .country-name {
+        font-size: 80px;
+        font-weight: 2500;
+      }
+      .top-rating {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      /* ----------------media queries-------------------- */
+      @media (max-width: 768px) {
+        .travel-card {
+          flex-direction: column;
+          background-attachment: scroll;
+          align-items: center;
+        }
+
+        /* Sticky featured destination becomes normal */
+        .featured-destination {
+          position: relative;
+          width: 90%;
+          margin: 20px auto;
+          top: unset;
+        }
+
+        .country-name {
+          font-size: 42px;
+          text-align: center;
+        }
+
+        .top-rating {
+          text-align: center;
+        }
+
+        /* Destination list */
+        .destination-list {
+          width: 90%;
+          margin: 20px auto;
+          flex-direction: column;
+          padding: 15px;
+        }
+
+        .destination-card-image {
+          width: 100%;
+          margin: 0;
+        }
+
+        .card-image {
+          height: 220px;
+        }
+
+        .card-content {
+          width: 100%;
+          margin-left: 0;
+          gap: 30px;
+        }
+
+        .card-content-list {
+          height: auto;
+        }
+      }
+
+      /*
+           .card-image {
+             height: 150px;
+             width: 250px;
+             border: 1px solid;
+           }*/
+    </style>
+  </head>
+  <body>
+    <!-- ------------------------navigation bar-------------------- -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./Images_2/image-removebg-preview (1).png"
+        /></a>
+      </div>
+      <div class="menu">
+        <a href="./index.html">Home</a>
+        <a href=".#destination">Destinations</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Places to visit</a>
+          <div class="dropdown-content">
+            <a href="./packages.html">Goa</a>
+            <a href="./maldives_packages.html">Maldives</a>
+            <a href="./phuket_packages.html">Phuket</a>
+          </div>
+        </div>
+        <a href="./index.html#gallery">Gallery</a>
+        <a href="./contact_us.html">Contact Us</a>
+        <a href="./login.html">LogIn</a>
+      </div>
+    </nav>
+    <!-- -------------Main Container-------------- -->
+    <div class="travel-card">
+      <!-- --------------Left Section------------- -->
+      <div class="featured-destination">
+        <p class="top-rating">TOP RATING</p>
+        <br />
+
+        <div class="stars">
+          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span
+          ><span>⭐</span>
+        </div>
+        <br />
+
+        <h1 class="country-name">Goa</h1>
+      </div>
+
+      <!-- ------------Right Section----------------- -->
+      <div class="destination-list">
+        <div class="destination-card-image">
+          <div class="card-image">
+            <img src="./Images_2/goa-list-Agonda.jpg" alt="Val Di Versa" />
+          </div>
+          <div class="card-image">
+            <img src="./Images_2/goa-list-Calangute.webp" alt="Val Di Versa" />
+          </div>
+          <div class="card-image">
+            <img src="./Images_2/goa-list-Cavelossim.webp" alt="Val Di Versa" />
+          </div>
+        </div>
+        <!-- ----------------------- -->
+        <!-- card 1 -->
+        <div class="card-content">
+          <div class="card-content-list">
+            <h3>AGONDA BEACH</h3>
+            <br />
+            <p>3 Days | 2 Nights</p>
+
+            <br />
+            <p>
+              Escape the noise and find your rhythm where the waves meet the
+              wilderness. A golden sanctuary for the soul, tucked away from the
+              tourist trails.
+            </p>
+            <br /><br />
+            <button>BOOK NOW</button><br /><br />
+          </div>
+
+          <!-- Card 2 -->
+
+          <div class="card-content-list">
+            <h3>CALANGUTE BEACH</h3>
+            <br />
+            <p>3 Days | 2 Nights</p>
+
+            <br />
+            <p>
+              Dive into the heartbeat of Goa at the legendary 'Queen of
+              Beaches'. From sun-soaked water sports to neon-lit nights—it all
+              starts here.
+            </p>
+            <br /><br />
+            <button>BOOK NOW</button><br /><br />
+          </div>
+
+          <!-- Card 3 -->
+
+          <div class="card-content-list">
+            <h3>CAVELOSSIM BEACH</h3>
+            <br />
+            <p>3 Days | 2 Nights</p>
+
+            <br />
+            <p>
+              Sophisticated shores and sapphire waters tailored for the refined
+              traveler. Step into a postcard-perfect world of black lava rocks
+              and golden horizons.
+            </p>
+            <br /><br />
+            <button>BOOK NOW</button><br /><br />
+          </div>
+        </div>
+      </div>
+      <!-- ------------------- -->
+    </div>
+    <!-- -------------footer------------------- -->
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_box">
+          <h3>Beach Paradise</h3>
+          <p>Your trusted travel partner.</p>
+        </div>
+
+        <div class="footer_box">
+          <h3>Quick Links</h3>
+          <a href="./index.html">Home</a>
+          <a href="./index.html#destination">Destinations</a>
+          <a href="#">Things to do</a>
+          <a href="./index.html#gallery">Gallery</a>
+          <a href="./contact_us.html">Contact</a>
+        </div>
+
+        <div class="footer_box">
+          <h3>Contact</h3>
+          <p>Email: akshata_travel@email.com</p>
+          <p>Phone: +91 1234567890</p>
+        </div>
+      </div>
+
+      <div class="footer_bottom">
+        © 2026 Travel Website. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
