@@ -1,2 +1,16 @@
-# Beach_Paradise_Travel_Website
-A travel website for exploring beautiful beach destinations and travel packages.
+# Beach Paradise Travel Website
+
+A beach-themed travel website designed to explore destinations and travel packages.
+
+## Technologies Used
+
+HTML
+CSS
+
+## Features
+
+Travel destinations
+Attractive and interactive UI
+Travel packages
+Images and videos
+Navigation between pages
