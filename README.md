@@ -1,4 +1,4 @@
-# Beach Paradise Travel Website
+# Beach Paradise - Travel Website
 
 A beach-themed travel website designed to explore destinations and travel packages.
 
